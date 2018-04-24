@@ -58,6 +58,7 @@ public class HystrixPrometheusMetricsPublisherThreadPool implements HystrixMetri
         addGauge("thread_active_count", currentStateDoc, new Callable<Number>() {
             @Override
             public Number call() {
+            	System.out.println("metrics.getCurrentActiveCount()>>>>"+metrics.getCurrentActiveCount());
                 return metrics.getCurrentActiveCount();
             }
         });

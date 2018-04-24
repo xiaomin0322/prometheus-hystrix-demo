@@ -37,7 +37,7 @@ public class HelloWorldHystrixController2 {
     public @ResponseBody String getUser() {
     	System.out.println("getUser>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     	try {
-			Thread.sleep(new Random(300).nextInt());
+			Thread.sleep(300);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

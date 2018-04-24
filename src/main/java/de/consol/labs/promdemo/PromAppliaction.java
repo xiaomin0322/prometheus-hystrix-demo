@@ -20,7 +20,26 @@ public class PromAppliaction {
     	return new HystrixCommandAspect();
     }
     
+    /*@Bean
+    HystrixMetricsPublisher hystrixMetricsPublisher2(MetricRegistry metricRegistry) {
+        HystrixCodaHaleMetricsPublisher publisher = new HystrixCodaHaleMetricsPublisher(metricRegistry);
+        HystrixPlugins.getInstance().registerMetricsPublisher(publisher);
+        return publisher;
+    }*/
     
+    
+	/*@Bean
+	public GraphiteReporter graphiteReporter(MetricRegistry metricRegistry) {
+		final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry).build(graphite());
+		reporter.start(1, TimeUnit.SECONDS);
+		return reporter;
+	} 
+	
+	@Bean
+	GraphiteSender graphite() {
+		return new Graphite(new InetSocketAddress("localhost", 2003));
+	}*/
+
     //HelloWorldHystrixController2 worldHystrixController2;
     
     public static void main(String[] args) throws Exception{
@@ -35,6 +54,8 @@ public class PromAppliaction {
     		}.start();
     		Thread.sleep(200);
     	}
+    	
+    	
     }
 
 }
