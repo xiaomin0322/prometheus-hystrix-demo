@@ -30,3 +30,8 @@ prometheus-hystrix-demo
 
 
 localhost:8080/prometheus
+
+
+参考：
+https://www.cnblogs.com/xzkzzz/p/10208115.html
+https://www.li-rui.top/2019/04/19/monitor/prometheus%E7%9B%91%E6%8E%A7kubenetes/
