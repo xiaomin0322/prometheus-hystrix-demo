@@ -52,7 +52,7 @@ public class PromAppliaction {
     				controller2.getUser();
     			}; 
     		}.start();
-    		Thread.sleep(200);
+    		Thread.sleep(2000);
     	}
     	
     	

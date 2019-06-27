@@ -57,7 +57,7 @@
         </dependency> -->
 
 
-	<dependency>
+	<!-- <dependency>
 		<groupId>io.dropwizard.metrics</groupId>
 		<artifactId>metrics-graphite</artifactId>
 		<version>3.1.0</version>
@@ -79,8 +79,46 @@
 		<groupId>io.dropwizard.metrics</groupId>
 		<artifactId>metrics-core</artifactId>
 		<version>3.1.0</version>
+	</dependency> -->
+	
+	 <dependency>
+		<groupId>io.dropwizard.metrics</groupId>
+		<artifactId>metrics-graphite</artifactId>
 	</dependency>
-        
+
+	<dependency>
+		<groupId>com.netflix.hystrix</groupId>
+		<artifactId>hystrix-codahale-metrics-publisher</artifactId>
+		<version>1.5.9</version>
+		<exclusions>
+			<exclusion>
+				<groupId>com.codahale.metrics</groupId>
+				<artifactId>metrics-core</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>io.dropwizard.metrics</groupId>
+		<artifactId>metrics-core</artifactId>
+	</dependency> 
+	
+	    <dependency>
+			<groupId>io.prometheus</groupId>
+			<artifactId>simpleclient_hotspot</artifactId>
+			 <version>0.0.21</version>
+		</dependency>
+		<dependency>
+			<groupId>io.prometheus</groupId>
+			<artifactId>simpleclient_servlet</artifactId>
+			 <version>0.0.21</version>
+		</dependency>
+		
+        <!-- Micrometer Prometheus registry  -->
+		<dependency>
+		    <groupId>io.micrometer</groupId>
+		    <artifactId>micrometer-registry-prometheus</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
 
     </dependencies>
 
